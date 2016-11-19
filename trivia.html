@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Title Game</title>
+    <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+    <script type="text/javascript"></script>
+    <script src="assets/javascript/game.js"></script>
+</head>
+
+
+<body>
+<!--  This is where the heading of the game would go-->
+  <h1 id="mainTitle">Totally Trivial Trivia!</h1>
+  <br>
+<!--  We are creating a wrapper to allow the questions and timmer to show together-->
+    <div class = 'mainGame'>
+<!--  here where shall see the countdown timer and its questions-->
+          <p id= "clockCounter">Time Remaining:<span id='timer'></span></p>
+
+<!--          we created a Div section so that questions can be kept seperately for other purposes-->
+         <div class="content-wrapper", id="wrapper1">
+<!--            each question would then have a radio button as a answer that needs to be created-->
+             <p class="Question">What film has a snake called Kaa in it?</p>
+                 <input name="foo"id="Alice" type="radio" name='AliceWonderLand' value='a'/> Alice in Wonderland
+                 <input name="foo"id="Jungle" class="question" type="radio">The Jungle Book
+                 <input name="foo" id="dalmation" class= "question" type="radio">101 Dalmnations
+                 <input name="foo"id="toy" class= "question" type="radio"> Toy Story
+                 <input name="foo"id="beast" class= "question" type="radio">Beauty and the Beast
+
+             <p class="Question">What is the name of the baboon in The Lion King?</p>
+                 <input name="foo" class= "question" id="Nafiki" type="radio">Nafiki
+                 <input name="foo" id="Tafiki" class= "question" type="radio">Tafiki
+                 <input name="foo" id="Pafiki" class= "question" type="radio">Pafiki
+                 <input name="foo" id= "Rafiki" class= "question" type="radio">Rafiki
+                 <input name="foo" id= "Safiki" class= "question" type="radio">Safiki
+
+             <p class="Question">In Aladdin where does Aladdin find the Genie's Lamp?</p>
+                 <input name="foo" id= "Hearts" class= "question" type="radio">The Cave of Hearts
+                 <input name="foo" id= "Magic" class= "question" type="radio">The Cave of Magic
+                 <input name="foo" id="Diamond" class= "question" type="radio">The Cave of Diamond
+             <input name="foo" id = " Wonders" class= "question"     type="radio"> The Cave of Wonders
+                 <input name="foo" id="Dreams" class= "question" type="radio">The Cave of Dreams
+
+             <p class="Question">In the film 101 Dalmation, who are the two men who capture the Dalmations for Cruella De Vil? </p>
+                 <input name="foo" id="morace"class= "question" type="radio">Morace and Casper
+                 <input name="foo" id="borace"class= "question" type="radio">Borace and Gasper
+                 <input name="foo" id="horace"class= "question" type="radio">Horace and Jasper
+                 <input name="foo" id="forace"class= "question" type="radio">Forace and Wasper
+                 <input name="foo" id="norace"class= "question" type="radio">Norace and Yaster
+
+
+             <p class="Question">What is the name of the boy the mice rescue in the film The Rescuer Down Under?</p>
+                 <input name="foo" id="Tody" class="question" type="radio">Tody
+                 <input name="foo" id="Jody" class="question" type="radio">Jody
+                 <input name="foo" id="Cody" class="question" type="radio">Cody
+                 <input name="foo" id="Rody" class="question" type="radio">Rody
+                 <input name="foo" id ="Kody" class="question" type="radio">Kody
+
+
+             <p class="Question">What poison fruit does the Queen give Snow White</p>
+                 <input name="foo" id= "Pear"class= "question" type="radio">Pear
+             <input name="foo" id= "Banana"class= "question"     type="radio">Banana
+                 <input name="foo" id= "apple"class= "question" type="radio">Apple
+                 <input name="foo" id= "orange"class= "question" type="radio">Orange
+                 <input name="foo" id= "kiwi" class= "question" type="radio">Kiwi
+
+             <p class="Question">Who trained Hercules to be a hero?</p>
+                 <input name = "foo" id="bob" class= "question" type="radio">Bob
+                 <input name = "foo" id="harry" class= "question" type="radio">Harry
+                 <input name = "foo" id="josh" class= "question" type="radio">Josh
+                 <input name = "foo" id="phil" class= "question" type="radio">Phil
+                 <input name = "foo" id="toby" class= "question" type="radio">Toby
+
+             <p class="Question">In Pocohontas what is Governor Ratcliffe's dog Called?</p>
+                 <input name = "foo" id="ratty"class= "question" type="radio"/>Ratty
+                 <input name = "foo" id="thomas"class= "question" type="radio"/>Thomas
+                 <input name = "foo" id="dafydd"class= "question" type="radio"/>Dafydd
+                 <input name = "foo" id="percy"class= "question" type="radio"/>Percy
+                 <input name = "foo" id="muppet"class= "question" type="radio"/>Muppet
+
+             <p class="Question">Who is the man who wants to marry Belle in Beauty and the Beast</p>
+                 <input name="foo" id="george"class= "question" type="radio"/>George
+                 <input name="foo" id="gilseppe"class= "question" type="radio"/>Gilseppe
+                 <input name="foo" id="gaston"class= "question" type="radio"/>Gaston
+                 <input name="foo" id="adamo"class= "question" type="radio"/>Adamo
+                 <input name="foo" id="rupert"class= "question" type="radio"/>Rupert
+
+             <p class="Question">In Tarzan, how did Jane, orter, and Clayton get to the Jungle?</p>
+                 <input name="foo" id="train"class= "question" type="radio"/>Train
+                 <input name="foo" id="bus"class= "question" type="radio"/>Bus
+                 <input name="foo" id="ship"class= "question" type="radio"/>Ship
+                 <input name="foo" id="airplane"class= "question" type="radio"/>Airplane
+                 <input name="foo" id="speedBoat"class= "question" type="radio"/>Speedboat
+
+             <p class="Question">Who owns the Siamese twins in Lady and the Trump?</p>
+                 <input name="foo" id="audrey"class= "question" type="radio"/>Aunt Audrey
+                 <input name="foo" id="tanya"class= "question" type="radio"/>Aunt Tanya
+                 <input name="foo" id="sarah"class= "question" type="radio"/>Aunt Sarah
+                 <input name="foo" id="bessie"class= "question" type="radio"/>Aunt Bessie
+                 <input name="foo" id="elizabeth"class= "question" type="radio"/>Aunt Elizabeth
+
+             <p class="Question">In Aristocats, What kind of car is Thomas O'Malley?</p>
+                 <input name="foo" id="posh" class= "question" type="radio"/>Posh Cat
+                 <input name="foo" id="pink" class= "question" type="radio"/>A Pink Cat
+                 <input name="foo" id="alley" class= "question" type="radio"/>Alley Cat
+                 <input name="foo" id="house" class= "question" type="radio"/>House Cat
+                 <input name="foo" id="scatty" class= "question" type="radio"/>Scatty Cat
+
+             <p class="Question">What kind of animals do I call a flower in the film Bambi?</p>
+                 <input name="foo" id="bird" class= "question" type="radio"/>Bird
+                 <input name="foo" id="rabbit" class= "question" type="radio"/>Rabbit
+                 <input name="foo" id="badger" class= "question" type="radio"/>Badger
+                 <input name="foo" id="fox" class= "question" type="radio"/>Fox
+                 <input name="foo" id="skunk" class= "question" type="radio"/>Skunk
+
+
+         </div>
+
+
+<!--         This is where the score would be shown by hiding the above div section-->
+         <div id="score" class="final">
+             <h3 id="answered">Answered : <span id="answered1"></span></h3>
+             <h3 id="unanswered">Unanswered: <span id="unanswered1"></span></h3>
+             <h3 id="score">Total Score :<span id="scored"></span></h3>
+
+
+
+         </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+id= ""
