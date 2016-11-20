@@ -5,8 +5,9 @@ var ansArray= ['b','d','d','c','c','c','d','d','c','c','c','c','e'];
 var selected=[];
 
 $(document).ready(function(){
-
+    event.preventDefault();
     function isChecked(){
+    event.preventDefault();
     var score=0;
     var answered=0;
     var unAnswered = 13;
