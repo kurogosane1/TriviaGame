@@ -1,155 +1,134 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trivia Title Game</title>
-    <script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script type="text/javascript"></script>
     <script src="assets/javascript/game.js"></script>
-</head>
-
+    <link rel="stylesheet" href="assets/css/style.css"> </head>
 
 <body>
-<!--  This is where the heading of the game would go-->
-  <h1 id="mainTitle">Totally Trivial Trivia!</h1>
-  <br>
-<!--  We are creating a wrapper to allow the questions and timmer to show together-->
-    <div class = 'mainGame'>
-<!--  here where shall see the countdown timer and its questions-->
-          <p id= "clockCounter">Time Remaining:<span id='timer'></span></p>
-
-<!--          we created a Div section so that questions can be kept seperately for other purposes-->
-         <div class="content-wrapper", id="wrapper1">
-         <form name='quiz' onsubmit= "return isChecked();">
-<!--            each question would then have a radio button as a answer that needs to be created-->
-            <div class="question">
-                 <p class="Question">What film has a snake called Kaa in it?</p>
-                     <input name="q1"id="q1" type="radio" name='AliceWonderLand' value='a'/> Alice in Wonderland
-                     <input name="q1"id="q1" class="question" type="radio" value='b'>The Jungle Book
-                     <input name="q1" id="q1" class= "question" type="radio" value='c'>101 Dalmnations
-                     <input name="q1"id="q1" class= "question" type="radio" value='d'> Toy Story
-                     <input name="q1"id="q1" class= "question" type="radio" value='e'>Beauty and the Beast
-             </div>
-             <div class="question>">
-                <p class="Question">What is the name of the baboon in The Lion King?</p>
-                     <input name="q2" class= "question" id="q2" type="radio" value="a">Nafiki
-                     <input name="q2" id="q2" class= "question" type="radio" value='b'>Tafiki
-                     <input name="q2" id="q2" class= "question" type="radio" value='c'>Pafiki
-                     <input name="q2" id= "q2" class= "question" type="radio" value='d'>Rafiki
-                     <input name="q2" id= "q2" class= "question" type="radio" value='e'>Safiki
-             </div>
-            <div class="question">
-
-             <p class="Question">In Aladdin where does Aladdin find the Genie's Lamp?</p>
-                 <input name="q3" id= "q3" class= "question" type="radio" value='a'>The Cave of Hearts
-                 <input name="q3" id= "q3" class= "question" type="radio" value='b'>The Cave of Magic
-                 <input name="q3" id="q3" class= "question" type="radio" value='c'>The Cave of Diamond
-                 <input name="q3" id = " q3" class= "question"     type="radio" value='d'> The Cave of Wonders
-                 <input name="q3" id="q3" class= "question" type="radio" value='e'>The Cave of Dreams
-             </div>
-            <div class='question'>
-             <p class="Question">In the film 101 Dalmation, who are the two men who capture the Dalmations for Cruella De Vil? </p>
-                 <input name="q4" id="q4"class= "question" type="radio" value='a'>Morace and Casper
-                 <input name="q4" id="q4"class= "question" type="radio" value='b'>Borace and Gasper
-                 <input name="q4" id="q4"class= "question" type="radio" value='c'>Horace and Jasper
-                 <input name="q4" id="q4"class= "question" type="radio" value='d'>Forace and Wasper
-                 <input name="q4" id="q4"class= "question" type="radio" value='e'>Norace and Yaster
-             </div>
-            <div class='question'>
-             <p class="Question">What is the name of the boy the mice rescue in the film The Rescuer Down Under?</p>
-                 <input name="q5" id="q5" class="question" type="radio" value='a'>Tody
-                 <input name="q5" id="q5" class="question" type="radio" value='b'>Jody
-                 <input name="q5" id="q5" class="question" type="radio" value='c'>Cody
-                 <input name="q5" id="q5" class="question" type="radio" value=d>Rody
-                 <input name="q5" id ="q5" class="question" type="radio" value='e'>Kody
-
-             </div>
-             <div class="question">
-                 <p class="Question">What poison fruit does the Queen give Snow White</p>
-                 <input name="q6" id= "q6" class= "question" type="radio" value='a'>Pear
-                 <input name="q6" id= "q6" class= "question"     type="radio" value='b'>Banana
-                 <input name="q6" id= "q6" class= "question" type="radio" value='c'>Apple
-                 <input name="q6" id= "q6" class= "question" type="radio" value='d'>Orange
-                 <input name="q6" id= "q6" class= "question" type="radio" value='e'>Kiwi
-             </div>
-            <div class='question'>
-                 <p class="Question">Who trained Hercules to be a hero?</p>
-                 <input name = "q7" id="q7" class= "question" type="radio" value='a'>Bob
-                 <input name = "q7" id="q7" class= "question" type="radio" value='b'>Harry
-                 <input name = "q7" id="q7" class= "question" type="radio" value='c'>Josh
-                 <input name = "q7" id="q7" class= "question" type="radio" value='d'>Phil
-                 <input name = "q7" id="q7" class= "question" type="radio" value='d'>Toby
-             </div>
-             <div class='question'>
-                 <p class="Question">In Pocohontas what is Governor Ratcliffe's dog Called?</p>
-                 <input name = "q8" id="q8"class= "question" type="radio" value='a'>Ratty
-                 <input name = "q8" id="q8" class= "question" type="radio" value='b'>Thomas
-                 <input name = "q8" id="q8" class= "question" type="radio" value='c'>Dafydd
-                 <input name = "q8" id="q8" class= "question" type="radio" value='d'>Percy
-                 <input name = "q8" id="q8" class= "question" type="radio" value='e'>Muppet
-             </div>
-             <div class='question'>
-                 <p class="Question">Who is the man who wants to marry Belle in Beauty and the Beast</p>
-                 <input name="q9" id="q9" class= "question" type="radio"  value='a'>George
-                 <input name="q9" id="q9" class= "question" type="radio" value='b'>Gilseppe
-                 <input name="q9" id="q9" class= "question" type="radio" value='c'>Gaston
-                 <input name="q9" id="q9" class= "question" type="radio" value='d'>Adamo
-                 <input name="q9" id="q9" class= "question" type="radio" value='e'>Rupert
-             </div>
-             <div class='question'>
-             <p class="Question">In Tarzan, how did Jane, orter, and Clayton get to the Jungle?</p>
-                 <input name="q10" id="q10" class= "question" type="radio" value='a'>Train
-                 <input name="q10" id="q10" class= "question" type="radio" value='b'>Bus
-                 <input name="q10" id="q10" class= "question" type="radio" value='c'>Ship
-                 <input name="q10" id="q10" class= "question" type="radio" value='d'>Airplane
-                 <input name="q10" id="q10" class= "question" type="radio" value='e'>Speedboat
-             </div>
-             <div class='question'>
-                 <p class="Question">Who owns the Siamese twins in Lady and the Trump?</p>
-                 <input name="q11" id="q11" class= "question" type="radio" value='a'>Aunt Audrey
-                 <input name="q11" id="q11" class= "question" type="radio" value='b'>Aunt Tanya
-                 <input name="q11" id="q11" class= "question" type="radio" value='c'>Aunt Sarah
-                 <input name="q11" id="q11" class= "question" type="radio" value='d'>Aunt Bessie
-                 <input name="q11" id="q11" class= "question" type="radio" value='e'>Aunt Elizabeth
-             </div>
-             <div class='question'>
-                 <p class="Question">In Aristocats, What kind of cat is Thomas O'Malley?</p>
-                 <input name="q12" id="q12" class= "question" type="radio" value='a'>Posh Cat
-                 <input name="q12" id="q12" class= "question" type="radio" value='b'>A Pink Cat
-                 <input name="q12" id="q12" class= "question" type="radio" value='c'>Alley Cat
-                 <input name="q12" id="q12" class= "question" type="radio" value='d'>House Cat
-                 <input name="q12" id="q12" class= "question" type="radio" value='e'>Scatty Cat
-             </div>
-             <div class='question'>
-                 <p class="Question">What kind of animals was called a flower in the film Bambi?</p>
-                     <input name="q13" id="q13" class= "question" type="radio" value='a'>Bird
-                     <input name="q13" id="q13" class= "question" type="radio" value='b'>Rabbit
-                     <input name="q13" id="q13" class= "question" type="radio" value='c'>Badger
-                     <input name="q13" id="q13" class= "question" type="radio" value='d'>Fox
-                     <input name="q13" id="q13" class= "question" type="radio" value='e'>Skunk
-             </div>
-             <button id="click" type='submit'>Submit</button>
-             </form>
-
-         </div>
-
-
-
-
-<!--         This is where the score would be shown by hiding the above div section-->
-         <div id="score" class="final">
-             <h3 id="answered">Answered : <span id="answered1"></span></h3>
-             <h3 id="unanswered">Unanswered: <span id="unanswered1"></span></h3>
-             <h3 id="score">Total Score :<span id="scored"></span></h3>
-
-
-
-         </div>
-
-
-
+    <!--  This is where the heading of the game would go-->
+    <h1 id="mainTitle">Totally Trivial Trivia!</h1>
+    <br>
+    <!--    //welcome page for the user to see once they have opened the page//-->
+    <div id="intro">
+        <p>Welcome to the trivia game. Where you shall be challenged on your knowledge for 30 seconds. Hope you are ready to play.</p>
+        <p>click the button below to begin</p>
+        <br>
+        <button id="enter">Enter</button>
+    </div>
+    <!--  We are creating a wrapper to allow the questions and timmer to show together-->
+    <div class='mainGame'>
+        <!--  here where shall see the countdown timer and its questions-->
+        <p id="clockCounter">Time Remaining:<span id='timer'></span></p>
+        <!--          we created a Div section so that questions can be kept seperately for other purposes-->
+        <div class="content-wrapper" , id="wrapper1">
+            <form name='quiz'>
+                <!--            each question would then have a radio button as a answer that needs to be created-->
+                <div class="question">
+                    <p class="Question">What film has a snake called Kaa in it?</p>
+                    <input name="q1" id="q1" type="radio" name='AliceWonderLand' value='a' /> Alice in Wonderland
+                    <input name="q1" id="q1" class="question" type="radio" value='b'>The Jungle Book
+                    <input name="q1" id="q1" class="question" type="radio" value='c'>101 Dalmnations
+                    <input name="q1" id="q1" class="question" type="radio" value='d'> Toy Story
+                    <input name="q1" id="q1" class="question" type="radio" value='e'>Beauty and the Beast </div>
+                <div class="question>">
+                    <p class="Question">What is the name of the baboon in The Lion King?</p>
+                    <input name="q2" class="question" id="q2" type="radio" value="a">Nafiki
+                    <input name="q2" id="q2" class="question" type="radio" value='b'>Tafiki
+                    <input name="q2" id="q2" class="question" type="radio" value='c'>Pafiki
+                    <input name="q2" id="q2" class="question" type="radio" value='d'>Rafiki
+                    <input name="q2" id="q2" class="question" type="radio" value='e'>Safiki </div>
+                <div class="question">
+                    <p class="Question">In Aladdin where does Aladdin find the Genie's Lamp?</p>
+                    <input name="q3" id="q3" class="question" type="radio" value='a'>The Cave of Hearts
+                    <input name="q3" id="q3" class="question" type="radio" value='b'>The Cave of Magic
+                    <input name="q3" id="q3" class="question" type="radio" value='c'>The Cave of Diamond
+                    <input name="q3" id=" q3" class="question" type="radio" value='d'> The Cave of Wonders
+                    <input name="q3" id="q3" class="question" type="radio" value='e'>The Cave of Dreams </div>
+                <div class='question'>
+                    <p class="Question">In the film 101 Dalmation, who are the two men who capture the Dalmations for Cruella De Vil? </p>
+                    <input name="q4" id="q4" class="question" type="radio" value='a'>Morace and Casper
+                    <input name="q4" id="q4" class="question" type="radio" value='b'>Borace and Gasper
+                    <input name="q4" id="q4" class="question" type="radio" value='c'>Horace and Jasper
+                    <input name="q4" id="q4" class="question" type="radio" value='d'>Forace and Wasper
+                    <input name="q4" id="q4" class="question" type="radio" value='e'>Norace and Yaster </div>
+                <div class='question'>
+                    <p class="Question">What is the name of the boy the mice rescue in the film The Rescuer Down Under?</p>
+                    <input name="q5" id="q5" class="question" type="radio" value='a'>Tody
+                    <input name="q5" id="q5" class="question" type="radio" value='b'>Jody
+                    <input name="q5" id="q5" class="question" type="radio" value='c'>Cody
+                    <input name="q5" id="q5" class="question" type="radio" value=d>Rody
+                    <input name="q5" id="q5" class="question" type="radio" value='e'>Kody </div>
+                <div class="question">
+                    <p class="Question">What poison fruit does the Queen give Snow White</p>
+                    <input name="q6" id="q6" class="question" type="radio" value='a'>Pear
+                    <input name="q6" id="q6" class="question" type="radio" value='b'>Banana
+                    <input name="q6" id="q6" class="question" type="radio" value='c'>Apple
+                    <input name="q6" id="q6" class="question" type="radio" value='d'>Orange
+                    <input name="q6" id="q6" class="question" type="radio" value='e'>Kiwi </div>
+                <div class='question'>
+                    <p class="Question">Who trained Hercules to be a hero?</p>
+                    <input name="q7" id="q7" class="question" type="radio" value='a'>Bob
+                    <input name="q7" id="q7" class="question" type="radio" value='b'>Harry
+                    <input name="q7" id="q7" class="question" type="radio" value='c'>Josh
+                    <input name="q7" id="q7" class="question" type="radio" value='d'>Phil
+                    <input name="q7" id="q7" class="question" type="radio" value='d'>Toby </div>
+                <div class='question'>
+                    <p class="Question">In Pocohontas what is Governor Ratcliffe's dog Called?</p>
+                    <input name="q8" id="q8" class="question" type="radio" value='a'>Ratty
+                    <input name="q8" id="q8" class="question" type="radio" value='b'>Thomas
+                    <input name="q8" id="q8" class="question" type="radio" value='c'>Dafydd
+                    <input name="q8" id="q8" class="question" type="radio" value='d'>Percy
+                    <input name="q8" id="q8" class="question" type="radio" value='e'>Muppet </div>
+                <div class='question'>
+                    <p class="Question">Who is the man who wants to marry Belle in Beauty and the Beast</p>
+                    <input name="q9" id="q9" class="question" type="radio" value='a'>George
+                    <input name="q9" id="q9" class="question" type="radio" value='b'>Gilseppe
+                    <input name="q9" id="q9" class="question" type="radio" value='c'>Gaston
+                    <input name="q9" id="q9" class="question" type="radio" value='d'>Adamo
+                    <input name="q9" id="q9" class="question" type="radio" value='e'>Rupert </div>
+                <div class='question'>
+                    <p class="Question">In Tarzan, how did Jane, orter, and Clayton get to the Jungle?</p>
+                    <input name="q10" id="q10" class="question" type="radio" value='a'>Train
+                    <input name="q10" id="q10" class="question" type="radio" value='b'>Bus
+                    <input name="q10" id="q10" class="question" type="radio" value='c'>Ship
+                    <input name="q10" id="q10" class="question" type="radio" value='d'>Airplane
+                    <input name="q10" id="q10" class="question" type="radio" value='e'>Speedboat </div>
+                <div class='question'>
+                    <p class="Question">Who owns the Siamese twins in Lady and the Trump?</p>
+                    <input name="q11" id="q11" class="question" type="radio" value='a'>Aunt Audrey
+                    <input name="q11" id="q11" class="question" type="radio" value='b'>Aunt Tanya
+                    <input name="q11" id="q11" class="question" type="radio" value='c'>Aunt Sarah
+                    <input name="q11" id="q11" class="question" type="radio" value='d'>Aunt Bessie
+                    <input name="q11" id="q11" class="question" type="radio" value='e'>Aunt Elizabeth </div>
+                <div class='question'>
+                    <p class="Question">In Aristocats, What kind of cat is Thomas O'Malley?</p>
+                    <input name="q12" id="q12" class="question" type="radio" value='a'>Posh Cat
+                    <input name="q12" id="q12" class="question" type="radio" value='b'>A Pink Cat
+                    <input name="q12" id="q12" class="question" type="radio" value='c'>Alley Cat
+                    <input name="q12" id="q12" class="question" type="radio" value='d'>House Cat
+                    <input name="q12" id="q12" class="question" type="radio" value='e'>Scatty Cat </div>
+                <div class='question'>
+                    <p class="Question">What kind of animals was called a flower in the film Bambi?</p>
+                    <input name="q13" id="q13" class="question" type="radio" value='a'>Bird
+                    <input name="q13" id="q13" class="question" type="radio" value='b'>Rabbit
+                    <input name="q13" id="q13" class="question" type="radio" value='c'>Badger
+                    <input name="q13" id="q13" class="question" type="radio" value='d'>Fox
+                    <input name="q13" id="q13" class="question" type="radio" value='e'>Skunk </div>
+                <input id="clicker" type='submit' value="submit" /> </form>
+        </div>
+        <!--         This is where the score would be shown by hiding the above div section-->
+        <div id="score" class="final">
+            <h3 id="answered">Answered : <span id="answered1"></span></h3>
+            <h3 id="unanswered">Unanswered: <span id="unanswered1"></span></h3>
+            <h3 id="score">Total Score :<span id="scored"></span></h3>
+        </div>
     </div>
 </body>
-</html>
 
+</html>

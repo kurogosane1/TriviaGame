@@ -1,0 +1,62 @@
+
+#wrapper1 {
+
+}
+
+body {
+ width: 960px;
+ margin: 0 auto;
+ background-image: url(../images/background.jpg)
+
+}
+
+
+.mainGame {
+    margin: 0 auto;
+    text-align: center;
+    color: aliceblue;
+    font-family: monospace;
+
+}
+
+#mainTitle {
+    text-align: center;
+    font-family: fantasy;
+    font-display: block;
+    color:aliceblue;
+
+
+}
+
+.final {
+    display: none;
+}
+
+.question {
+    margin: 0; auto;
+
+}
+
+#intro {
+/*    //This is the first page address//*/
+    text-align: center;
+    margin: 0 auto;
+    color:aliceblue;
+    font-family: monospace;
+
+}
+
+#enter {
+    color:aliceblue;
+    padding: 5px 10px;
+    background-color: rgba(255, 223, 87, 0.58);
+
+}
+
+h3 {
+    color: whitesmoke;
+    font-family: monospace;
+    text-align: center;
+    background-color: aqua;
+
+}
